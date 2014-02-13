@@ -1,0 +1,40 @@
+/*
+ *	STANDARD FILES - Built on Bootstrap
+ */
+/*	supplies mixins for font styling as well as @font-face rules   *//*	supplies mixins for font styling as well as @font-face rules   */
+/*	LESS variables for the design’s various colors   *//*	LESS variables for the design’s various colors   */
+/*	supplies mixins for a grid system, such as the .col(@width) mixin above   *//*	supplies mixins for a grid system, such as the .col(@width) mixin above   */
+/*	mixins for interface features like buttons, forms, and dialogs   *//*	mixins for interface features like buttons, forms, and dialogs   */
+/*	design-specific layout of the site   *//*	design-specific layout of the site   */
+/*
+ *	CB STYLE FILES 	
+ */
+#cb_loader-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  /* browsers */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#F0ffffff', endColorstr='#F0ffffff');
+  /* IE */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+#cb_loader-content {
+  text-align: center;
+  padding-top: 4em;
+  font-size: 2em;
+  width: 100%;
+  height: 100%;
+}
+#cb_loader-content h1 {
+  color: #3177ae;
+  font-size: 35px;
+}
+/*
+ *	GENERAL STYLES
+ */
+/*	the main stylesheet, including all of the above and adding in whatever site-specific styles are otherwise necessary   *//*	the main stylesheet, including all of the above and adding in whatever site-specific styles are otherwise necessary   */

@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+    "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml">
+    <head>
+		<title></title>
+        <meta charset="UTF-8">
+                
+        <script type="text/javascript" src="./scripts/resolveAuth.js"></script>
+	</head>
+
+	<body>
+    
+    <div id="fb-root"></div>
+    <div id="content">
+
+    <input class="buttonStyle" type="submit" name="publishImageToWallButton" id="publishImageToWallButton" value="Original" onclick="FacebookResolve.resolve(console.log('CALLBACK'))">   
+
+    <input class="buttonStyle" type="submit" name="publishImageToWallButton" id="publishImageToWallButton" value="Basic Authorization" onclick="FacebookResolve.resolveBasic(console.log('CALLBACK'))">   
+
+    <input class="buttonStyle" type="submit" name="publishImageToWallButton" id="publishImageToWallButton" value="Advance Authorization" onclick="FacebookResolve.resolveAdvance(console.log('CALLBACK'))">    
+</body>
+</html>
