@@ -64,10 +64,6 @@ app.View.Loader = Backbone.View.extend({
         $("#"+this.options.tmpHTMLId).html(this.options.tmpContent).css(this.options.tmpContentCSS);
     },
 
-    updateContent: function(content) {
-
-    },
-
     checkOut: function(i) {
         log("Loader.checkOut()");
         this.checkIns = i || 1;
@@ -79,7 +75,7 @@ app.View.Loader = Backbone.View.extend({
 
         if(this.checkins <= 0) {
             this.checkins = 0;
-            this.hide();
+            this._hide();
         }
     },
 
@@ -90,17 +86,17 @@ app.View.Loader = Backbone.View.extend({
         } else {
             this.checkins++;
         }
-        this.show();
+        this._show();
     },
 
     _hide: function () {
-        log("Loader.hide()");
+        log("Loader._hide()");
         this.options.beforeHide();   
         this.$el.fadeOut(this.duration, this.options.afterHide());
     },
 
     _show: function() {
-        log("Loader.show()");
+        log("Loader._show()");
         this.options.beforeShow();        
         this.$el.fadeIn(this.duration, this.options.afterShow());
     }

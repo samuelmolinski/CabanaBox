@@ -66,7 +66,6 @@ var FacebookResolve = (function() {
 		   };
 			
 		});
-		/////////
 	}
 	//
 	var showErrorOrSuccess = function(errorMessage, listenerFunction){
