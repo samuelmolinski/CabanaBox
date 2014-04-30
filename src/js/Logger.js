@@ -3,13 +3,13 @@ var app = app || {View:{}, Model:{}, Collection:{}};
 Logger = Backbone.View.extend({
 	enabled: false,
 	initialize: function() {
-		$this = this;
+		$Logger = this;
 
 		/*global log:false*/ // Tell IE9 to use its built-in console
 		if (Function.prototype.bind && (typeof console === 'object' || typeof console === 'function') && typeof console.log === 'object') {
 		  ['log','info','warn','error','assert','dir','clear','profile','profileEnd']
 		    .forEach(function (method) {
-		      $this.enabled ? console[method] = this.call(console[method], console) : false;
+		      $Logger.enabled ? console[method] = this.call(console[method], console) : false;
 		    }, Function.prototype.bind);
 		}
 
@@ -46,20 +46,20 @@ Logger = Backbone.View.extend({
 		    if (isReallyIE8Plus || (typeof console !== 'undefined' && typeof console.log === 'function')) {
 		      // Get argument details for browsers with primitive consoles if this optional plugin is included
 		      if (log.detailPrint && log.needDetailPrint && log.needDetailPrint()) {
-		        $this.enabled ? console.log('-----------------') : false; // Separator
+		        $Logger.enabled ? console.log('-----------------') : false; // Separator
 		        args = log.detailPrint(args);
 		        i = 0;
 		        while (i < args.length) {
-		          $this.enabled ? console.log(args[i]) : false;
+		          $Logger.enabled ? console.log(args[i]) : false;
 		          i++;
 		        }
 		      }
 		      // Single argument, which is a string
 		      else if ((Array.prototype.slice.call(args)).length === 1 && typeof Array.prototype.slice.call(args)[0] === 'string') {
-		        $this.enabled ? console.log((Array.prototype.slice.call(args)).toString()) : false;
+		        $Logger.enabled ? console.log((Array.prototype.slice.call(args)).toString()) : false;
 		      }
 		      else {
-		        $this.enabled ? console.log(Array.prototype.slice.call(args)) : false;
+		        $Logger.enabled ? console.log(Array.prototype.slice.call(args)) : false;
 		      }
 		    }
 
